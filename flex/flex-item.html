@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <title>flex做列表元素</title>
+  <style>
+  *{
+    margin:0;
+    padding: 0;
+  }
+  ul,li{
+    list-style: none;
+  }
+  .flex-cont{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:flex;
+    align-items: center;
+  }
+  .flex-item{
+    flex:1;
+    /*给最主要的元素加比例*/
+  }
+  /*p{文字高度等于行高，那么文字就垂直剧中
+    line-height: 36px;
+    background: green;
+    height: 36px;
+  }*/
+  .s-tit {
+     /*高度等于行高，那么文字就垂直居中*/
+     /*background: green;
+     line-height: 36px;
+     height: 36px;*/
+     font-size: 20px;
+     font-weight: bold;
+ }
+  .s-tit, .s-desc{
+    line-height: 1.2;
+  }
+  .s-img{
+    /*占该占的位置*/
+    width:50px;
+    height: 50px;
+    background: #31bbee;
+  }
+  .f-icon{
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #31bbee;
+  }
+  </style>
+</head>
+<body>
+   <p>
+      移动端的特点？屏幕小，交互全靠手
+      列表 高度：45px+ 宽度：不能放太多内容
+      375px iphone7
+      414px iphone7 plus
+   </p>
+   <ul>
+     <li>
+       <div class="flex-cont flex-simple">
+         <div class="s-img"></div>
+         <div class="flex-item s-word">
+           <p class="s-tit">title</p>
+           <p class="s-desc">description</p>
+         </div>
+         <i class="f-icon"></i>
+       </div>
+     </li>
+   </ul>
+</body>
+</html>
